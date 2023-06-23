@@ -42,9 +42,9 @@ const createPokemonCard = (pokemon) => {
     const poke_number = pokemon.id;
     // make the first letter upper case
     const poke_name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
-    // map(): loop thru & returns array
+    // loop thru types & returns array
     const poke_types = pokemon.types.map(type => type.type.name); 
-    // find(): loop thru & returns the first element
+    // loop thru & returns the first element
     const poke_type = main_types.find(type => poke_types.indexOf(type) > -1); // -1 means not exist
     // set background color by the type
     pokemonEl.style.backgroundColor = colors[poke_type];
